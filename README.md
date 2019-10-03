@@ -1,22 +1,4 @@
----
-title: "Glovo Technical Test"
-author: "Alfonso Noguer"
-date: "3/10/2019"
-
-output:
- html_document:
-   keep_md: TRUE
-   theme: cerulean
-   toc: true
-   toc_depth: 3
-   toc_float:
-     collapsed: true
-     smooth_scroll: true
----
-
-
-
-## 1. Distance
+﻿## 1. Distance
 
 Create an SQL query that shows the distance between the courier starting position and the pickup point, as well as the distance between the pickup point and the delivery point.
 

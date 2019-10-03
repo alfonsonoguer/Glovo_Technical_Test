@@ -76,6 +76,9 @@ length_manhattan <- abs(x1-x2) + abs(y1-y2)
 length_euclidean <- (x1-x2)^2 + (y1-y2)^2
 ```
 
+This is pretty basic code I could optimize the filtering and return 2 vectors or even join both tables filter and calculate the distance and return the output. 
+And especially fit it in a functions but I think this is more clearer and easier to understand.
+
 
 ## 2. Cohort Retention
 
@@ -200,6 +203,7 @@ retention <- function(users, orders, start_date= dmy(01-01-2015),
 }
 ```
 
+This code could also be optimized, for example, use nested functions instead of loops. But I'm not that adept with that technique and I would need a sample to iterate with. This is the best I am comfortable without data.
 
 ## 3. Restaurant Ranking
 
@@ -242,5 +246,5 @@ GROUP BY average_score DESC
 
 I thought of adding the Country and location but it felt like it would clutter the results.
 
-Thank you for your time and attention.<br/>
+Thank you for your time and attention.<br/><br/>
 [Alfonso Noguer](https://www.linkedin.com/in/alfonso-noguer/)

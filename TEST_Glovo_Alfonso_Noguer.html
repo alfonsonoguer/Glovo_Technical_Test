@@ -1590,6 +1590,7 @@ y2 &lt;- order_points %&gt;% filter(id == &quot;id/key we want to search&quot;) 
 length_manhattan &lt;- abs(x1-x2) + abs(y1-y2) 
 # or
 length_euclidean &lt;- (x1-x2)^2 + (y1-y2)^2</code></pre>
+<p>This is pretty basic code I could optimize the filtering and return 2 vectors or even join both tables filter and calculate the distance and return the output. And especially fit it in a functions but I think this is more clearer and easier to understand.</p>
 </div>
 </div>
 <div id="cohort-retention" class="section level2">
@@ -1695,6 +1696,7 @@ retention &lt;- function(users, orders, start_date= dmy(01-01-2015),
   }#close first while
   return(results)
 }</code></pre>
+<p>This code could also be optimized, for example, use nested functions instead of loops. But I’m not that adept with that technique and I would need a sample to iterate with. This is the best I am comfortable without data.</p>
 </div>
 </div>
 <div id="restaurant-ranking" class="section level2">
@@ -1726,7 +1728,7 @@ WHERE
 GROUP BY average_score DESC
   </code></pre>
 <p>I thought of adding the Country and location but it felt like it would clutter the results.</p>
-<p>Thank you for your time and attention.<br /> <a href="https://www.linkedin.com/in/alfonso-noguer/">Alfonso Noguer</a></p>
+<p>Thank you for your time and attention.<br /><br /> <a href="https://www.linkedin.com/in/alfonso-noguer/">Alfonso Noguer</a></p>
 </div>
 </div>
 

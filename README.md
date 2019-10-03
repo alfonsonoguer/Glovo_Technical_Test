@@ -225,4 +225,5 @@ GROUP BY average_score DESC
 I thought of adding the Country and location but it felt like it would clutter the results.
 
 Thank you for your time and attention.
+
 [Alfonso Noguer](https://www.linkedin.com/in/alfonso-noguer/)

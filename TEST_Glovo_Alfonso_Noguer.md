@@ -14,9 +14,7 @@ output:
      smooth_scroll: true
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+
 
 ## 1. Distance
 
@@ -33,7 +31,8 @@ In SQL we do something similar first we create 2 new tables with the filtered va
 
 Then we join both of them and calculate the distance in the select (we use euclidean in this example but easily it could be manhattan)
 
-```{SQL eval=FALSE}
+
+```sql
 SELECT 
   a.id,
   a.courier_id,
@@ -56,8 +55,8 @@ The second approach is to filter the 4 coordinates long/lat of origin and destin
 
 To do this we use the ID as the Key for both tables so we can know how to join origin and destination.
 
-```{r eval=FALSE}
 
+```r
 pacman::p_load(tidyverse)
 
 #if we want to filter by something different than ID we use something like
@@ -92,7 +91,8 @@ The **WEEK_DIFF** is a function that takes in 2 dates, and return the number of 
 **Cohort Size:** is simply how many users are in each group.
 And finally, I put everything together.
 
-```{SQL eval=FALSE}
+
+```sql
 WITH cohort_items AS (
   SELECT
     date_trunc("week", O.activation_time_local)::date as cohort_week,
@@ -151,8 +151,8 @@ With that function, I do a double loop the first loop gives us the respective co
 to make it easier to process al this process is in a function where the inputs are the two dataframes of the problem, the starting date in which we want the process to start (by default the first of January 2015 the year Glovo launched)
 and the interval of the cohorts in days (default 7 days, 1 week as the question indicates).
 
-```{r eval=FALSE}
 
+```r
 pacman::p_load(lubridate,tidyverse)
 #first we generate a function that finds the date_time in the dataframe 
 #and returns the unique coustomer_ids if existing and costomer ids if not
@@ -218,7 +218,8 @@ Then we filter by the stores we found from the frist table and the month we care
 
 For this example, the month we are going to filter is September of 2019.
 
-```{SQL eval=FALSE}
+
+```sql
 WITH selected_stores AS (
   SELECT
     json.storeIds AS stores 
@@ -241,5 +242,5 @@ GROUP BY average_score DESC
 
 I thought of adding the Country and location but it felt like it would clutter the results.
 
-Thank you for your time and attention.<br/><br/>
+Thank you for your time and attention.<br/>
 [Alfonso Noguer](https://www.linkedin.com/in/alfonso-noguer/)
